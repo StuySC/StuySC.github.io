@@ -4227,6 +4227,27 @@
 
 		}
 
+		/* Different header for mobile */
+		@media screen and (max-width: 720px) {
+			.mobile-header {
+				display: block;
+			}
+
+			.desktop-header {
+				display: none;
+			}
+		}
+
+		@media screen and (min-width: 721px) {
+			.mobile-header {
+				display: none;
+			}
+
+			.desktop-header {
+				display: block;
+			}
+		}
+
 /* Responsive iFrame */
  
 .responsive-iframe-container {
@@ -4245,4 +4266,52 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.pretty-header {
+	display: block;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 100%;	
+	background: transparent;
+	overflow: hidden;
+	position: absolute;
+	z-index: 1000;
+}
+
+.pretty-header li {
+	display: inline-block;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: center;
+	float: right;
+}
+
+.pretty-header li a {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: "Raleway", Helvetica, sans-serif
+}
+
+.pretty-header li, .pretty-header li a, .ahover {
+	color: #ffffff;
+}
+
+.pretty-header li a:hover, .ahover:hover {
+	-moz-transition: color .3s ease-in;
+    -o-transition: color .3s ease-in;
+    -webkit-transition: color .3s ease-in;
+    transition: color .3s ease-in;
+	color: #51BAA4;
+}
+
+.mobile-header {
+	display: none;
+}
+
+.desktop-header {
+	display: block;
 }
