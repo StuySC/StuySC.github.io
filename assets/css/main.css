@@ -4228,7 +4228,7 @@
 		}
 
 		/* Different header for mobile */
-		@media screen and (min-width: 720px) {
+		@media screen and (max-width: 720px) {
 			.mobile-header {
 				display: block;
 			}
@@ -4238,7 +4238,7 @@
 			}
 		}
 
-		@media screen and (max-width: 721px) {
+		@media screen and (min-width: 721px) {
 			.mobile-header {
 				display: none;
 			}
@@ -4300,12 +4300,34 @@
 	color: #ffffff;
 }
 
-.pretty-header li a:hover, .ahover:hover {
+.ahover-box {
+	color: #000000;
+	font-size: 24px;
+	text-decoration: none;
+	border: 2px solid #000000;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.ahover-alt {
+	color: #000000;
+	text-decoration: none;
+}
+
+.pretty-header li a:hover, .ahover:hover, .ahover-alt:hover {
 	-moz-transition: color .3s ease-in;
     -o-transition: color .3s ease-in;
     -webkit-transition: color .3s ease-in;
     transition: color .3s ease-in;
 	color: #51BAA4;
+}
+
+.ahover-box:hover {
+	-moz-transition: background .3s ease-in;
+    -o-transition: background .3s ease-in;
+    -webkit-transition: background .3s ease-in;
+    transition: background .3s ease-in;
+	background: #51BAA4;
 }
 
 .mobile-header {
@@ -4314,4 +4336,28 @@
 
 .desktop-header {
 	display: block;
+}
+
+.longlist {
+	table-layout: fixed;
+}
+
+.longlist tbody th, .longlist tbody tr td {
+	border: 2px solid #000000;
+	padding: 10px;
+	background: #FFFFFF !important;
+}
+
+.longlist tr th {
+	text-align: center;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.longlist tr td {
+	vertical-align: center;
+	text-align: center;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
 }
